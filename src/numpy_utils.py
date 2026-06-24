@@ -11,7 +11,6 @@ Fecha: [Fecha de la sesión]
 
 import numpy as np
 
-
 # ---------------------------------------------------------------------------
 # Datos de práctica
 #
@@ -60,8 +59,18 @@ def describir_array(arr):
     """
     # TODO: imprime forma con arr.shape, tipo con arr.dtype,
     #       mínimo con arr.min() y máximo con arr.max()
-    pass
-
+    #pass
+    
+    print(f'Forma   :', VALORES_DECLARADOS.shape)
+    print(f'Tipo    :   :',VALORES_DECLARADOS.dtype)
+    print(f'Mínimo  :', VALORES_DECLARADOS.min())
+    print(f'Máximo  :',VALORES_DECLARADOS.max())
+    
+    #def describir_array(arr):
+    #print(f"  Forma   : {arr.shape}")
+    #print(f"  Tipo    : {arr.dtype}")
+    #print(f"  Mínimo  : {arr.min()}")
+    #print(f"  Máximo  : {arr.max()}")
 
 def crear_array_declaraciones(valores_lista):
     """
@@ -78,8 +87,12 @@ def crear_array_declaraciones(valores_lista):
         -> array([1000000., 500000., 2000000.])
     """
     # TODO: usa np.array con el parámetro dtype=np.float64
-    pass
-
+    #pass
+       
+    #valores_lista = np.array([1_000_000, 500_000, 2_000_000], dtype=np.float64)
+    #valores_lista (list):
+    valores_lista = np.array([], dtype=np.float64)
+    return np.ndarray(valores_lista, dtype=np.float64)
 
 def comparar_lista_vs_array(valores_lista):
     """
@@ -105,8 +118,16 @@ def comparar_lista_vs_array(valores_lista):
     # 2. Convierte valores_lista a array con np.array
     # 3. Calcula el IVA multiplicando el array por 0.19 y guarda en iva_array
     # 4. Imprime ambos resultados con etiquetas
-    pass
+    #pass
+    
+    iva_lista = []
+    for valor in valores_lista:
+        iva_lista.append(valor * 0.19)
+        print(f'Lista: requiere ciclo for {iva_lista}')
 
+    arr = np.array(valores_lista, dtype=np.float64)   
+    iva_array = arr * .19
+    print(f'Array: {iva_array}') 
 
 def filtrar_valores_en_rango(valores_lista, minimo, maximo):
     """
@@ -133,7 +154,12 @@ def filtrar_valores_en_rango(valores_lista, minimo, maximo):
     # 2. Recorre valores_lista con un ciclo for
     # 3. Si minimo <= valor <= maximo, agrégalo con .append()
     # 4. Retorna la lista acumulada
-    pass
+    #pass
+    filtrados = []
+    for valor in valores_lista:
+        if minimo <= valor <= maximo:
+            filtrados.append(valor)
+    return filtrados
 
 
 # ===========================================================================
@@ -157,7 +183,8 @@ def obtener_rango(arr, inicio, fin):
         -> array([      0., 2300000.,  950000.])
     """
     # TODO: usa slicing con arr[inicio:fin]
-    pass
+    #pass
+    
 
 
 def obtener_ultimos(arr, n):

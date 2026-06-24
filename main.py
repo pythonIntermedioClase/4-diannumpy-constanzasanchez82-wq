@@ -257,3 +257,13 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+var_acumulador = +1
+lista = [2,3,4,5,6]
+for i in lista:
+    var_acumulador
+print(i)    
+
+suma_funcion = sum(lista)
+print(suma_funcion)
+ 

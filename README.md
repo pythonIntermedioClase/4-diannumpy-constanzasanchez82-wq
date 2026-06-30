@@ -50,7 +50,6 @@ python main.py
 - [De dónde viene NumPy](#de-dónde-viene-numpy)
 - [Sección 1 — Arrays y tipos de datos](#sección-1--arrays-y-tipos-de-datos)
 - [Sección 2 — Indexación y slicing](#sección-2--indexación-y-slicing)
-- [Pausa](#pausa)
 - [Sección 3 — Vectorización](#sección-3--vectorización)
 - [Sección 4 — Funciones universales (ufuncs)](#sección-4--funciones-universales-ufuncs)
 - [Sección 5 — Arrays booleanos](#sección-5--arrays-booleanos)
@@ -1804,7 +1803,7 @@ Al eliminar los ciclos, el código expresa la intención directamente: "multipli
 | 6 | `and` / `or` entre máscaras booleanas | `ValueError` | Usar `&` y `|` con paréntesis |
 | 7 | Paréntesis desbalanceados en `np.where` anidado | `SyntaxError` | Contar que hay tantos `)` como `np.where(` |
 
-### Conexión con la sesión 5
+### Conexión con las siguientes sesiones
 
 Una **Series** de pandas es internamente un array NumPy con un índice de etiquetas. Un **DataFrame** es una colección de Series alineadas por ese mismo índice. Todas las operaciones de hoy, máscaras, `np.where`, vectorización, funcionan directamente sobre columnas de DataFrames.
 

@@ -413,7 +413,12 @@ def contar_con_ciclo(lista, umbral):
     # 2. Recorre lista con un ciclo for
     # 3. Si valor > umbral, suma 1 a contador
     # 4. Retorna contador
-    pass
+    #pass
+    contador = 0
+    for valor in lista:
+        if valor > umbral:
+            contador += 1
+    return contador
 
 
 def sumar_con_ciclo(lista):
@@ -438,7 +443,11 @@ def sumar_con_ciclo(lista):
     # 2. Recorre lista con un ciclo for
     # 3. Suma cada valor a total
     # 4. Retorna total
-    pass
+    #pass
+    total = 0
+    for valor in lista:
+        total += valor
+    return total
 
 
 def obtener_mascara_mora(dias_mora):
@@ -456,7 +465,8 @@ def obtener_mascara_mora(dias_mora):
         -> array([False,  True, False,  True])
     """
     # TODO: retorna dias_mora > 0
-    pass
+    #pass
+    return(dias_mora > 0)
 
 
 def filtrar_valores_con_mora(valores, dias_mora):
@@ -483,7 +493,9 @@ def filtrar_valores_con_mora(valores, dias_mora):
     # TODO:
     # 1. Crea la máscara: mascara = dias_mora > 0
     # 2. Retorna valores[mascara]
-    pass
+    #pass
+    mascara = dias_mora > 0
+    return valores[mascara]
 
 
 def contar_sobre_umbral(arr, umbral):
@@ -505,7 +517,10 @@ def contar_sobre_umbral(arr, umbral):
     # 1. Crea la máscara: mascara = arr > umbral
     # 2. Cuenta los True con cantidad = np.sum(mascara)
     # 3. Retorna int(cantidad)
-    pass
+    #pass
+    mascara = arr > umbral
+    cantidad = np.sum(mascara)
+    return int(cantidad)
 
 
 # ===========================================================================

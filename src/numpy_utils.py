@@ -330,7 +330,9 @@ def calcular_variacion_absoluta(valores_actuales, valores_anteriores):
         -> array([200000., 100000.,      0.])
     """
     # TODO: usa np.abs(valores_actuales - valores_anteriores)
-    pass
+    #pass
+    variacion_absoluta= np.abs(valores_actuales - valores_anteriores)
+    return(variacion_absoluta)
 
 
 def normalizar_valores(arr):
@@ -353,7 +355,11 @@ def normalizar_valores(arr):
     """
     # TODO: calcula minimo = arr.min(), maximo = arr.max()
     #       retorna (arr - minimo) / (maximo - minimo)
-    pass
+    #pass
+    
+    minimo = arr.min() 
+    maximo = arr.max()
+    return((arr - minimo) / (maximo - minimo))
 
 
 def aplicar_raiz_cuadrada(arr):
@@ -373,7 +379,11 @@ def aplicar_raiz_cuadrada(arr):
         -> array([  0.      , 316.22...,  632.45...,  948.68...])
     """
     # TODO: usa np.sqrt(arr)
-    pass
+    #pass
+    verificar= np.any(arr < 0)
+    raiz_cuadrada = np.sqrt(arr)
+    return(raiz_cuadrada)
+    
 
 
 # ===========================================================================
